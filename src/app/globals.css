@@ -1,2 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
 @import "tailwindcss";
-@import "@heroui/styles"; 
+@import "@heroui/styles";
+@plugin "daisyui";
+
+:root {
+  --primary: #4B2C20;
+  --primary-light: #E8D8CF;
+
+  --secondary: #064E3B;
+  --secondary-light: #D1FAE5;
+
+  --accent: #FFF8F6;
+
+  --neutral: #4f4c4a;
+}
+
+body {
+  font-family: "Outfit", sans-serif;
+}
+
+@media screen and (max-width: 640px) {
+  .container {
+    width: 90%;
+  }
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

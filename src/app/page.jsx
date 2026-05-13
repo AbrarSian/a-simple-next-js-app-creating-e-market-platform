@@ -1,10 +1,18 @@
+import Featured from "@/src/components/home/Featured";
+import Hero from "@/src/components/home/Hero";
+import Tips from "@/src/components/home/Tips";
+import TopBreeds from "@/src/components/home/TopBreeds";
+import WhyChooseUs from "@/src/components/home/WhyChooseUs";
 import Image from "next/image";
 
 export default function Home() {
   return (
-    <section className="Home container mx-auto bg-white">
-      <h2 className="">Home</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit est nihil aspernatur quasi illo expedita veritatis ex hic, vero consequuntur placeat perferendis aut eveniet cupiditate explicabo reprehenderit quod ab necessitatibus!</p>
-    </section>
+    <div className="Home">
+      <Hero />
+      <Featured />
+      <TopBreeds />
+      <Tips />
+      <WhyChooseUs />
+    </div>
   );
 }

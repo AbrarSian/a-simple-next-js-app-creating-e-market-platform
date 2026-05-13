@@ -35,7 +35,7 @@ export default function RootLayout({ children }) {
           <Navbar />
         </header>
 
-        <main className="min-h-screen bg-[#F9F7F5] pt-5 pb-20">
+        <main className="min-h-screen bg-[#F9F7F5] pb-20">
           {children}
         </main>
 

@@ -83,7 +83,7 @@ const Footer = () => {
 
                 </div>
 
-                <div className="mt-12 border-t border-white/10 pt-8 text-center text-sm text-white/50">
+                <div className="mt-12 border-t border-white/10 pt-8 text-center text-sm text-white/70">
                     <p>&copy; QurbaniHat. All rights reserved by Shishir.</p>
                 </div>
             </div>

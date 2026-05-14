@@ -41,7 +41,7 @@ const Tips = () => {
                 </div>
 
                 {/* Cards */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-10">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-10 animate__animated animate__fadeIn">
                     {tipsData.map((tip, index) => (
                         <div
                             key={index}

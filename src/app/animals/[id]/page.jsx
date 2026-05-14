@@ -7,7 +7,7 @@ const AnimalDetails = async ({ params }) => {
     const { id } = await params;
     console.log(id);
 
-    const res = await fetch(`${baseUrl}/data.json`, { cache: 'no-store' });
+    const res = await fetch("http://localhost:3000/data.json");
     const animals = await res.json();
 
     if (!res.ok) {

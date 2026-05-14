@@ -1,12 +1,18 @@
 "use client";
 
 import Link from "next/link";
-import { FaArrowRight } from "react-icons/fa"
+import { FaArrowRight } from "react-icons/fa";
 import toast from "react-hot-toast";
+import { authClient } from "@/lib/auth-client";
+import { useRouter } from "next/navigation";
+import { FcGoogle } from "react-icons/fc";
+
+const Register = () => {
+    const router = useRouter();
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-       const formData = new FormData(e.currentTarget);
+        const formData = new FormData(e.currentTarget);
         const userData = Object.fromEntries(formData.entries());
 
         const { data, error } = await authClient.signUp.email({
@@ -16,7 +22,7 @@ import toast from "react-hot-toast";
             image: userData.image,
         });
 
-        console.log({ data, error });
+        // console.log({ data, error });
 
         if (error) {
             toast(`Signup failed: ${error.message}`);
@@ -24,7 +30,15 @@ import toast from "react-hot-toast";
         }
 
         toast("Registration Successful 🎉");
+        router.push('/login')
     };
+
+    const googleLogin = async () => {
+        const data = await authClient.signIn.social({
+            provider: "google",
+        });
+    };
+
     return (
         <main className="Register sm:min-h-[80vh] container mx-auto shadow-lg hover:shadow-xl my-10 rounded-3xl overflow-hidden flex flex-col md:flex-row">
 
@@ -83,12 +97,13 @@ import toast from "react-hot-toast";
                             className="w-full border border-black/10 px-4 py-2 rounded-md"
                         />
 
-                         <button
+                        <button
                             type="submit"
                             className="w-full bg-(--secondary) text-white py-2 rounded-md flex items-center justify-center gap-2">
                             Register <FaArrowRight />
                         </button>
                     </form>
+
                     <div className="mt-6">
 
                         {/* Divider */}
@@ -100,20 +115,18 @@ import toast from "react-hot-toast";
 
                         {/* Google Button */}
                         <button
+                            onClick={googleLogin}
                             type="button"
-                            className="w-full flex items-center justify-center gap-3 border border-black/10 py-2 rounded-md hover:bg-slate-50 transition"
+                            className="w-full flex items-center justify-center gap-3 border border-black/10 py-2 rounded-md hover:bg-slate-200 transition"
                         >
-                            <img
-                                src="https://www.svgrepo.com/show/475656/google-color.svg"
-                                alt="google"
-                                className="w-5 h-5"
-                            />
+                            <FcGoogle size={20} />
                             <span className="text-sm font-medium text-gray-700">
                                 Continue with Google
                             </span>
                         </button>
 
                     </div>
+
                     <p className="mt-6 text-sm text-center">
                         Already have an account?{" "}
                         <Link href="/login" className="text-(--secondary) font-semibold">

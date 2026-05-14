@@ -43,7 +43,7 @@ const Hero = () => {
                 {/* Right Image */}
                 <div className="w-full lg:w-1/2 relative">
                     <img
-                        src="/images/hero-image.jpg"
+                        src="https://livestock-qurbani-platform.vercel.app/hero-image.jpg"
                         alt="Livestock"
                         className="w-full h-[250px] sm:h-[320px] md:h-[380px] lg:h-[420px] object-cover rounded-xl"
                     />

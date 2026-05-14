@@ -7,7 +7,7 @@ const AnimalDetails = async ({ params }) => {
     const { id } = await params;
     console.log(id);
 
-    const res = await fetch("http://localhost:3000/data.json");
+    const res = await fetch("https://livestock-qurbani-platform.vercel.app/data.json");
     const animals = await res.json();
 
     if (!res.ok) {

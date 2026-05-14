@@ -1,22 +1,16 @@
 "use client";
 
-import { useState } from "react";
 import Link from "next/link";
+import toast from "react-hot-toast";
 import { FaArrowRight, FaUserCircle } from "react-icons/fa";
 
 const Login = () => {
-     const [form, setForm] = useState({
-        email: "",
-        password: "",
-    });
-
-    const handleChange = (e) => {
-        setForm({ ...form, [e.target.name]: e.target.value });
-    };
-
     const handleSubmit = (e) => {
         e.preventDefault();
-        alert("Login Successful ✅");
+        const formData = new FormData(e.currentTarget);
+        const userData = Object.fromEntries(formData.entries());
+        console.log(userData);
+        toast("Login Successful ✅");
     };
     return (
          <section className="Login sm:min-h-[80vh] container mx-auto shadow-lg hover:shadow-xl my-10 rounded-3xl overflow-hidden flex flex-col md:flex-row">
@@ -48,8 +42,6 @@ const Login = () => {
                             type="email"
                             name="email"
                             placeholder="Email"
-                            value={form.email}
-                            onChange={handleChange}
                             required
                             className="w-full border border-black/10 px-4 py-2 rounded-md"
                         />
@@ -58,14 +50,12 @@ const Login = () => {
                             type="password"
                             name="password"
                             placeholder="Password"
-                            value={form.password}
-                            onChange={handleChange}
                             required
                             className="w-full border border-black/10 px-4 py-2 rounded-md"
                         />
-
-                        <button className="w-full bg-(--secondary) text-white py-2 rounded-md flex items-center justify-center gap-2">
-                            Sign In <FaArrowRight />
+                        <button
+                            type="submit"
+                            className="w-full bg-(--secondary) text-white py-2 rounded-md flex items-center justify-center gap-2">
                         </button>
                     </form>
                     <div className="mt-6">

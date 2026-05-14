@@ -1,5 +1,4 @@
-"use client"
-
+"use client";
 import { authClient } from "@/lib/auth-client";
 import { Avatar, Button } from "@heroui/react";
 import Image from "next/image";
@@ -29,7 +28,7 @@ const Navbar = () => {
         </>
 
     return (
-        <nav className="navbar container mx-auto px-0 animate__animated animate__fadeIn">
+        <nav className="navbar container mx-auto px-0 animate__animated animate__fadeInDown">
             <div className="navbar-start ">
                 <div className="dropdown ">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden px-0 pr-1">

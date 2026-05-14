@@ -75,6 +75,7 @@ const Login = () => {
                         <button
                             type="submit"
                             className="w-full bg-(--secondary) text-white py-2 rounded-md flex items-center justify-center gap-2">
+                        Sign In <FaArrowRight />
                         </button>
                     </form>
                     <div className="mt-6">

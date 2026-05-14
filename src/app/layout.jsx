@@ -1,7 +1,7 @@
 import { Poppins } from "next/font/google";
 import "./globals.css";
-import Navbar, { App } from "../components/layout/Navbar";
-import Footer from "../components/layout/Footer";
+import Navbar, { App } from "@/components/layout/Navbar";
+import Footer from "@/components/layout/Footer";
 import { Toaster } from "react-hot-toast";
 import 'animate.css';
 

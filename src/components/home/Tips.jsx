@@ -26,7 +26,7 @@ const tipsData = [
 
 const Tips = () => {
     return (
-        <section id="tip" className="Tips py-10 sm:py-20 bg-[#ee865e] text-white">
+        <section id='tip' className="Tips py-10 sm:py-20 bg-[#ee865e] text-white">
 
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
 
@@ -41,7 +41,7 @@ const Tips = () => {
                 </div>
 
                 {/* Cards */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-10 animate__animated animate__fadeIn">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-10 animate__animated animate__fadeInRight">
                     {tipsData.map((tip, index) => (
                         <div
                             key={index}

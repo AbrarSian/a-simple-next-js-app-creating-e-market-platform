@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import AnimalCard from "@/src/components/shared/AnimalCard";
+import AnimalCard from "@/components/shared/AnimalCard";
 import { IoArrowBack } from "react-icons/io5";
 import { FaSort } from "react-icons/fa";
 import { useState, useEffect } from "react";
@@ -15,7 +15,7 @@ const AllAnimals = () => {
 
     // fetch data
     useEffect(() => {
-        fetch("https://qurbanihat-livestock-booking.vercel.app/data.json")
+        fetch("/data.json")
             .then((res) => res.json())
             .then((data) => {
                 setAnimals(data);

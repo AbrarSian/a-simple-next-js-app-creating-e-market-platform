@@ -35,7 +35,7 @@ const features = [
 
 const WhyChooseUs = () => {
     return (
-        <section id="about" className="py-10 sm:py-20 bg-slate-50" >
+        <section id='about' className="py-10 sm:py-20 bg-slate-50" >
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
 
                 {/* Header */}
@@ -53,7 +53,7 @@ const WhyChooseUs = () => {
                     {features.map((item, index) => (
                         <div
                             key={index}
-                            className="p-6 sm:p-8 rounded-2xl bg-white border border-slate-200 shadow-sm hover:shadow-md transition animate__animated animate__fadeIn"
+                            className="p-6 sm:p-8 rounded-2xl bg-white border border-slate-200 shadow-sm hover:shadow-md transition animate__animated animate__fadeInLeft"
                         >
                             <div
                                 className={`w-14 h-14 flex items-center justify-center rounded-xl mb-6 text-xl ${item.bg} ${item.color}`}

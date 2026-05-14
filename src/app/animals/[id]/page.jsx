@@ -1,4 +1,4 @@
-import ConfirmBookingBtn from '@/src/components/animal-details/ConfirmBookingBtn';
+import ConfirmBookingBtn from '@/components/animal-details/ConfirmBookingBtn';
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import React from 'react';
@@ -7,7 +7,7 @@ const AnimalDetails = async ({ params }) => {
     const { id } = await params;
     console.log(id);
 
-    const res = await fetch("https://qurbanihat-livestock-booking.vercel.app/data.json");
+    const res = await fetch(`${baseUrl}/data.json`, { cache: 'no-store' });
     const animals = await res.json();
 
     if (!res.ok) {

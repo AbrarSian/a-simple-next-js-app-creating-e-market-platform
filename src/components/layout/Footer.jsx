@@ -49,11 +49,11 @@ const Footer = () => {
                         <ul className="space-y-3 text-sm">
                             <li className="flex items-center gap-3">
                                 <MdLocationOn className="text-tertiary text-lg" />
-                                <span>Sector 10, Uttara, Dhaka</span>
+                                <span>Kawran Bazar, Kotoali, Dhaka</span>
                             </li>
                             <li className="flex items-center gap-3">
                                 <MdPhone className="text-tertiary text-lg" />
-                                <span>+880 1234 567 890</span>
+                                <span>+880 4678 9012</span>
                             </li>
                             <li className="flex items-center gap-3">
                                 <MdEmail className="text-tertiary text-lg" />
@@ -84,7 +84,7 @@ const Footer = () => {
                 </div>
 
                 <div className="mt-12 border-t border-white/10 pt-8 text-center text-sm text-white/70">
-                    <p>&copy; QurbaniHat. All rights reserved by Shishir.</p>
+                    <p>&copy; QurbaniHat. All rights reserved by Abrar Sian.</p>
                 </div>
             </div>
         </footer>

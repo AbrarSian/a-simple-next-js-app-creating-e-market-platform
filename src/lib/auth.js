@@ -2,11 +2,9 @@ import { betterAuth } from "better-auth";
 import { MongoClient } from "mongodb";
 import { mongodbAdapter } from "better-auth/adapters/mongodb";
 
-import dns from "node:dns/promises";
-dns.setServers(["1.1.1.1", "8.8.8.8"]);
-
+// 
 // connecting code 
-const client = new MongoClient(process.env.MONGODB_URI);
+const client = new MongoClient(process.env.MONGO_URI);
 
 // db name
 const db = client.db("qurbanihat");
@@ -25,3 +23,4 @@ export const auth = betterAuth({
         },
     },
 });
+

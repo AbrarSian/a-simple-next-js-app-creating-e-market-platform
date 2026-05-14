@@ -35,7 +35,7 @@ const features = [
 
 const WhyChooseUs = () => {
     return (
-        <section id="about" className="py-10 sm:py-20 bg-slate-50">
+        <section id="about" className="py-10 sm:py-20 bg-slate-50" >
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
 
                 {/* Header */}
@@ -45,8 +45,6 @@ const WhyChooseUs = () => {
                     </h2>
                     <p className="mt-4 text-slate-600 max-w-xl mx-auto text-sm sm:text-base">
                         We understand the religious and emotional significance of Qurbani. Thats why we have built a platform that prioritizes transparency, health, and convenience to ensure your sacrifice is performed with utmost respect and professionalism.
-                    </p>
-                </div>
                     </p>
                 </div>
 
@@ -73,7 +71,6 @@ const WhyChooseUs = () => {
                         </div>
                     ))}
                 </div>
-
             </div>
         </section>
     );
